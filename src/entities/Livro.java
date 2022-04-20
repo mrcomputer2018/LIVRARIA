@@ -1,19 +1,64 @@
 package entities;
 
 public class Livro {
-    public String nome;
-    public String descricao;
-    public Double valor;
-    public String isbn;
-    public Autor autor;
+    private String nome;
+    private String descricao;
+    private Double valor;
+    private String isbn;
+    private Autor autor;
+
+    // Construtor
+    public Livro() {
+        this.isbn = "000-00-00000-00-0";
+    }
+    public Livro(Autor autor){
+        this();
+        this.autor = autor;
+    }
+
+    // Getters ee setters
+    public Double getValor() {
+        return valor;
+    }
+    public void setValor(Double valor) {
+        this.valor = valor;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getDescricao() {
+        return descricao;
+    }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    public String getIsbn() {
+        return isbn;
+    }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+    public Autor getAutor() {
+        return autor;
+    }
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
 
     // Metodo
     public Boolean temAutor() {
         return this.autor != null;
     }
 
-    public void aplicaDesconto(Double porcentagem){
-        this.valor-= this.valor * porcentagem;
+    public Boolean aplicaDescontoDe(Double porcentagem){
+        if( porcentagem > 0.3 ) {
+            return false;
+        }
+        this.valor-= getValor() * porcentagem;
+        return true;
     }
 
     public void mostrarDetalhes() {
@@ -21,7 +66,7 @@ public class Livro {
         System.out.println(mensagem);
         System.out.println("Nome: " + nome);
         System.out.println("Descricao: " + descricao);
-        System.out.println("Valor: RS" + valor);
+        System.out.println("Valor: RS" + getValor());
         System.out.println("ISBN: " + isbn);
         if (temAutor()) {
             autor.mostrarDetalhes();
