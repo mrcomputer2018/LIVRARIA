@@ -2,10 +2,11 @@ package application;
 
 import entities.Autor;
 import entities.Livro;
+import exceptions.DomainException;
 
-public class CadastroDeLivros {
+public class CadastroDeLivros  {
 
-    public void cadastrar() {
+    public void cadastrar() throws DomainException {
         // Scanner input = new Scanner();
         Autor autor = new Autor();
         Autor outroAutor = new Autor();

@@ -6,6 +6,7 @@ public class Livro {
     private Double valor;
     private String isbn;
     private Autor autor;
+    private boolean impresso;
 
     // Construtor
     public Livro() {
@@ -14,6 +15,7 @@ public class Livro {
     public Livro(Autor autor){
         this();
         this.autor = autor;
+        this.impresso = true;
     }
 
     // Getters ee setters
