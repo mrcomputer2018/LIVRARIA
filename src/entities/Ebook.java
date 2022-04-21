@@ -19,14 +19,10 @@ public class Ebook  extends Livro{
     // Metodos
     @Override
     public Boolean aplicaDescontoDe(Double porcentagem){
-        double desconto;
-
         if( porcentagem > 0.15 ) {
             return false;
         }
-        // Acessando o get e set da classe pai
-        desconto = this.getValor() - (this.getValor() * porcentagem);
-        this.setValor(desconto);
-        return true;
+        // Delegando para a logica do metodo da classe pai
+        return super.aplicaDescontoDe(porcentagem);
     }
 }

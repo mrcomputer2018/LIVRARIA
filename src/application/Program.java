@@ -39,6 +39,11 @@ public class Program {
             System.out.println("Deseja continuar(s/n)? ");
             continuar = inputChar.next().charAt(0);
 
-        }
+        } // Fim while
+
+        System.out.println();
+        System.out.println("----------------------------");
+        System.out.println("---- SISTEMA FINALIZADO ----");
+        System.out.println("----------------------------");
     }
  }
