@@ -16,6 +16,8 @@ public class Program {
         while( continuar == 's' || continuar == 'S') {
             try {
                 CadastroDeLivros cadastroDeLivros = new CadastroDeLivros();
+                RegrasDeDesconto regrasDeDesconto = new RegrasDeDesconto();
+
                 System.out.println("====== SISTEMA LIVRARIA =====");
                 System.out.println("***** MENU *****");
                 System.out.println("( 1 ) - Cadastrar Livros");
@@ -29,7 +31,7 @@ public class Program {
                         cadastroDeLivros.cadastrar();
                     case 2:
                         System.out.println();
-                        cadastroDeLivros.cadastrar();
+                        regrasDeDesconto.aplicar();
                 }
             } catch (DomainException e) {
                 System.out.println("Error : " + e.getMessage());

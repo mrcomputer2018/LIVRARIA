@@ -20,12 +20,6 @@ public class CadastroDeLivros  {
         livro.setNome("Java 8 Pratico");
         livro.setDescricao("Novos recursos de linguaguem");
         livro.setValor(59.90);
-        System.out.println("Valor atual: R$" + livro.getValor());
-        if (!livro.aplicaDescontoDe(0.1)) {
-            System.out.println("Desconto não pode ser maior do que 30%");
-        } else {
-            System.out.println("Valor com desconto: R$" + livro.getValor());
-        }
         livro.setIsbn("978-85-66250-46-6");
 
         livro.aplicaDescontoDe(0.1);
@@ -42,15 +36,9 @@ public class CadastroDeLivros  {
         outroLivro.setDescricao("Crie seus primeiros programas");
         outroLivro.setValor(59.90);
         System.out.println("Valor atual: R$" + outroLivro.getValor());
-        if (!outroLivro.aplicaDescontoDe(0.4)) {
-            System.out.println("Desconto não pode ser maior do que 30%");
-        } else {
-            System.out.println("Valor com desconto: R$" + outroLivro.getValor());
-        }
-        outroLivro.setIsbn("978-85-66250-22-0");
+               outroLivro.setIsbn("978-85-66250-22-0");
 
-        outroLivro.aplicaDescontoDe(0.1);
-        outroLivro.mostrarDetalhes();
+       outroLivro.mostrarDetalhes();
 
     }
 }
