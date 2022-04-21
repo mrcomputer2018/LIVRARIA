@@ -5,6 +5,7 @@ package application;
 
 import exceptions.DomainException;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program {
@@ -20,7 +21,7 @@ public class Program {
                 RegistroDeVendas registroDeVendas = new RegistroDeVendas();
 
                 System.out.println("====== SISTEMA LIVRARIA =====");
-                System.out.println("***** MENU *****");
+                System.out.println("+++++++++++ MENU ++++++++++");
                 System.out.println("( 1 ) - Cadastrar Livros");
                 System.out.println("( 2 ) - Aplicar desconto");
                 System.out.println("( 3 ) - Registrar vendas");
@@ -31,15 +32,21 @@ public class Program {
                     case 1:
                         System.out.println();
                         cadastroDeLivros.cadastrar();
+                        break;
                     case 2:
                         System.out.println();
                         regrasDeDesconto.aplicar();
+                        break;
                     case 3:
                         System.out.println();
                         registroDeVendas.registrar();
+                        break;
                 }
             } catch (DomainException e) {
                 System.out.println("Error : " + e.getMessage());
+            } catch (InputMismatchException e ) {
+                System.out.println("Error : Opção invalida!!!");
+                input.next();
             }
 
             System.out.println();
