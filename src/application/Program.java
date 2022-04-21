@@ -17,11 +17,13 @@ public class Program {
             try {
                 CadastroDeLivros cadastroDeLivros = new CadastroDeLivros();
                 RegrasDeDesconto regrasDeDesconto = new RegrasDeDesconto();
+                RegistroDeVendas registroDeVendas = new RegistroDeVendas();
 
                 System.out.println("====== SISTEMA LIVRARIA =====");
                 System.out.println("***** MENU *****");
                 System.out.println("( 1 ) - Cadastrar Livros");
                 System.out.println("( 2 ) - Aplicar desconto");
+                System.out.println("( 3 ) - Registrar vendas");
                 System.out.println("Digite a opção desejada :");
                 int menu = input.nextInt();
 
@@ -32,6 +34,9 @@ public class Program {
                     case 2:
                         System.out.println();
                         regrasDeDesconto.aplicar();
+                    case 3:
+                        System.out.println();
+                        registroDeVendas.registrar();
                 }
             } catch (DomainException e) {
                 System.out.println("Error : " + e.getMessage());
