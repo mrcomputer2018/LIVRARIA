@@ -40,7 +40,8 @@ public class Program {
             continuar = inputChar.next().charAt(0);
 
         } // Fim while
-
+        input.close();
+        inputChar.close();
         System.out.println();
         System.out.println("----------------------------");
         System.out.println("---- SISTEMA FINALIZADO ----");
