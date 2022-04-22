@@ -52,13 +52,7 @@ public abstract class Livro {
         return this.autor != null;
     }
 
-    public Boolean aplicaDescontoDe(Double porcentagem){
-        if( porcentagem > 0.3 ) {
-            return false;
-        }
-        this.valor-= getValor() * porcentagem;
-        return true;
-    }
+    public abstract boolean aplicaDescontoDe(Double porcentagem);
 
     public void mostrarDetalhes() {
         String mensagem = "Mostrando detalhes do livro:";

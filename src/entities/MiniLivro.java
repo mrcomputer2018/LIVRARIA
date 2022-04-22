@@ -7,7 +7,8 @@ public class MiniLivro extends Livro{
     }
 
     // Metodo
-    public boolean aplicaDescontoDe(double porcentagem){
+    @Override
+    public boolean aplicaDescontoDe(Double porcentagem){
         return false;
     }
 }

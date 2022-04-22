@@ -14,5 +14,14 @@ public class LivroFisico extends Livro{
     }
 
     // Metodos
-
+    @Override
+    public boolean aplicaDescontoDe(Double porcentagem) {
+        if( porcentagem > 0.3 ) {
+            return false;
+        }
+        double desconto = getValor() - (getValor() * porcentagem);
+        setValor(desconto);
+        System.out.println("Aplicando desconto no livro Fisico");
+        return true;
+    }
 }
