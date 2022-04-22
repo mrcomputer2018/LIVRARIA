@@ -9,12 +9,9 @@ public abstract class Livro {
     private boolean impresso;
 
     // Construtor
-    public Livro() {
-        this.isbn = "000-00-00000-00-0";
-    }
     public Livro(Autor autor){
-        this();
         this.autor = autor;
+        this.isbn = "000-00-00000-00-0";
         this.impresso = true;
     }
 
