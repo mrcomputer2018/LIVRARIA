@@ -7,8 +7,6 @@ public class Revista {
     private Editora editora;
 
     // Get e set
-
-
     public Double getValor() {
         return valor;
     }
