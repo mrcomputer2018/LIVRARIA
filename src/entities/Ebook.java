@@ -22,6 +22,7 @@ public class Ebook  extends Livro{
         if( porcentagem > 0.15 ) {
             return false;
         }
+        System.out.println("Aplicando desconto em Ebook");
         // Delegando para a logica do metodo da classe pai
         return super.aplicaDescontoDe(porcentagem);
     }
