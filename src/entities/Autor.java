@@ -31,6 +31,11 @@ public class Autor {
         System.out.println("Email: " + email);
         System.out.println("CPF: " + cpf);
     }
+
+    @Override
+    public String toString() {
+        return "nome: '" + nome + '\'';
+    }
 }
 
 

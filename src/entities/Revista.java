@@ -1,13 +1,13 @@
 package entities;
 
-public class Revista {
+public class Revista implements Produto, Promocional{
     private String nome;
     private String descricao;
     private Double valor;
     private Editora editora;
 
     // Get e set
-    public Double getValor() {
+    public double getValor() {
         return valor;
     }
     public void setValor(Double valor) {

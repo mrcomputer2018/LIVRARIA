@@ -1,6 +1,6 @@
 package entities;
 
-public class LivroFisico extends Livro{
+public class LivroFisico extends Livro implements Promocional{
     private double taxaImpressao;
 
     // Construtor
@@ -15,7 +15,7 @@ public class LivroFisico extends Livro{
 
     // Metodos
     @Override
-    public boolean aplicaDescontoDe(Double porcentagem) {
+    public boolean aplicaDescontoDe(double porcentagem) {
         if( porcentagem > 0.3 ) {
             return false;
         }

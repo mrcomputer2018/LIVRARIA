@@ -7,7 +7,7 @@ public class RegrasDeDesconto {
         Autor autor = new Autor();
         autor.setNome("Rodrigo Turini");
 
-        Livro livro = new LivroFisico(autor);
+        LivroFisico livro = new LivroFisico(autor);
         livro.setValor(59.90);
 
         if (!livro.aplicaDescontoDe(0.3)) {
@@ -16,7 +16,7 @@ public class RegrasDeDesconto {
             System.out.println("Valor do livro com desconto: R$" + livro.getValor());
         }
 
-        Livro ebook = new Ebook(autor);
+        Ebook ebook = new Ebook(autor);
         ebook.setValor(29.90);
 
         if (!ebook.aplicaDescontoDe(0.3)) {
@@ -27,14 +27,7 @@ public class RegrasDeDesconto {
 
         Livro miniLivro = new MiniLivro(autor);
         miniLivro.setValor(39.90);
-
-        if (!miniLivro.aplicaDescontoDe(0.0)) {
-            System.out.println("Desconto não pode ser maior do que 30% para ebook");
-        } else {
-            System.out.println("Valor do ebook com desconto: R$" + miniLivro.getValor());
-        }
-
-
-
+        System.out.println("Desconto não pode ser aplicado para mini livro");
+        System.out.println("Valor do mini livro: R$" + miniLivro.getValor());
     }
 }

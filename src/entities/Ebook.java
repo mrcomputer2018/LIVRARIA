@@ -1,6 +1,6 @@
 package entities;
 
-public class Ebook  extends Livro{
+public class Ebook  extends Livro implements Promocional{
     private String waterMark;
 
     // Construtor
@@ -18,7 +18,7 @@ public class Ebook  extends Livro{
 
     // Metodos
     @Override
-    public boolean aplicaDescontoDe(Double porcentagem){
+    public boolean aplicaDescontoDe( double porcentagem){
         if( porcentagem > 0.15 ) {
             return false;
         }

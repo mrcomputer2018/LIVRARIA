@@ -16,7 +16,7 @@ public class CadastroDeLivros  {
         autor.setCpf("123456789-70");
         autor.setEmail("rodrigo.turini@caelum.com.br");
 
-        Livro livro = new LivroFisico(autor);
+        LivroFisico livro = new LivroFisico(autor);
 
         livro.setNome("Java 8 Pratico");
         livro.setDescricao("Novos recursos de linguaguem");
@@ -30,7 +30,7 @@ public class CadastroDeLivros  {
         outroAutor.setCpf("123456789-90");
         outroAutor.setEmail("paulo.silveira@caelum.com.br");
 
-        Livro outroLivro = new LivroFisico(outroAutor);
+        LivroFisico outroLivro = new LivroFisico(outroAutor);
 
         System.out.println();
         outroLivro.setNome("JLogica de Prpgramacao");
@@ -39,7 +39,8 @@ public class CadastroDeLivros  {
         System.out.println("Valor atual: R$" + outroLivro.getValor());
                outroLivro.setIsbn("978-85-66250-22-0");
 
-       outroLivro.mostrarDetalhes();
+        outroLivro.aplicaDescontoDe(0.1);
+        outroLivro.mostrarDetalhes();
 
     }
 }

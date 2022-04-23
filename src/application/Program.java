@@ -47,6 +47,8 @@ public class Program {
             } catch (InputMismatchException e ) {
                 System.out.println("Error : Opção invalida!!!");
                 input.next();
+            } catch ( NullPointerException e) {
+                System.out.println("Error : Produto sem preço definido!!!");
             }
 
             System.out.println();

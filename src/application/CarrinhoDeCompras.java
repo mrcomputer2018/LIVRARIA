@@ -1,6 +1,6 @@
 package application;
 
-import entities.Livro;
+import entities.Produto;
 
 public class CarrinhoDeCompras {
     private double total = 0;
@@ -11,10 +11,10 @@ public class CarrinhoDeCompras {
     }
 
     // Metodos
-    public void adiciona(Livro livro) {
-        System.out.println("Adicionando: " + livro);
+    public void adiciona(Produto produto) {
+        System.out.println("Adicionando: " + produto);
         // Aplica desconto a cada venda
-        livro.aplicaDescontoDe(0.05);
-        total = total + livro.getValor();
+       // produto.aplicaDescontoDe(0.05);
+        this.total = this.total + produto.getValor();
     }
 }

@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class Livro {
+public abstract class Livro implements Produto{
     private String nome;
     private String descricao;
     private Double valor;
@@ -16,7 +16,7 @@ public abstract class Livro {
     }
 
     // Getters ee setters
-    public Double getValor() {
+    public double getValor() {
         return valor;
     }
     public void setValor(Double valor) {
@@ -51,8 +51,6 @@ public abstract class Livro {
     public Boolean temAutor() {
         return this.autor != null;
     }
-
-    public abstract boolean aplicaDescontoDe(Double porcentagem);
 
     public void mostrarDetalhes() {
         String mensagem = "Mostrando detalhes do livro:";

@@ -3,6 +3,7 @@ package application;
 import entities.Autor;
 import entities.Ebook;
 import entities.LivroFisico;
+import entities.MiniLivro;
 
 public class RegistroDeVendas {
     // Metodos
@@ -18,9 +19,14 @@ public class RegistroDeVendas {
         ebook.setNome("Test-driven Deveelopment");
         ebook.setValor(29.90);
 
+        MiniLivro mini = new MiniLivro(autor);
+        mini.setNome("Testando o mini livro vol2");
+        mini.setValor(39.90);
+
         CarrinhoDeCompras carrinho= new CarrinhoDeCompras();
         carrinho.adiciona(fisico);
         carrinho.adiciona(ebook);
+        carrinho.adiciona(mini);
         System.out.println("Total : R$" + carrinho.getTotal());
     }
 }
