@@ -12,11 +12,14 @@ public class RegistroDeVendas {
         autor.setNome("Mauricio Aniche");
 
         LivroFisico fisico = new LivroFisico(autor);
-        fisico.setNome("Test-driven Deveelopment");
+        fisico.setNome("Test-driven Development");
         fisico.setValor(59.90);
+        if(fisico.aplicaDescontoDe10Porcento()){
+            System.out.println("Valor agora eh: R$" + fisico.getValor());
+        }
 
         Ebook ebook = new Ebook(autor);
-        ebook.setNome("Test-driven Deveelopment");
+        ebook.setNome("Test-driven Development");
         ebook.setValor(29.90);
 
         MiniLivro mini = new MiniLivro(autor);
